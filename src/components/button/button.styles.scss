@@ -1,0 +1,74 @@
+@import "../../assets/sass/abstracts/variables";
+
+@mixin removeBtnInitialStyles {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    outline: inherit;
+    font-size: 1.6rem;
+}
+
+.btn {  /* in case of btn is <a> tag we use btn:link, btn:visited selectors// and everything under position:relative is in the case of button to remove initial html styling*/
+    text-transform: uppercase;
+    /*text-decoration: none;*/
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s; /* like animation property// all selects all child*/
+    cursor: pointer;
+    position: relative; /* important*/
+    /*to remove initial html styling of the button*/
+    @include removeBtnInitialStyles;
+
+    &:hover {//with sudo elements we need & keyword, it means & = .btn
+        transform: translateY(-.3rem); /* up is negative direction */
+        box-shadow: 0 1rem 2rem rgba($color-black,0.2); /*first value is x dir, second y and third is blur value */
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0; /*fades out */
+        }
+    }
+    &:active {
+        transform: translateY(-.1rem); /* go down when clicked*/
+        box-shadow: 0 .5rem 1rem rgba($color-black,0.2);
+    }
+
+    &::after { /* pseudo element //act like element right after btn element //we make it look exactly the same as btn except it's hidden under the btn*/
+        content: ""; /* always need to specify content and display property*/
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* under btn */
+        transition: all .4s;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-dark-grey;
+        animation: moveInBottom .5s ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards; /*to start with initial state of animate even in delay time*/
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+}
+
+@keyframes moveInBottom {
+    0% { /*beginning of animation */
+        opacity: 0;
+        transform: translateY(3rem); /*negative value means the element goes to l.h.s */
+    }
+    100% { /*ending of animation */
+        opacity: 1;
+        transform: translate(0);
+    }
+}
