@@ -13,7 +13,7 @@ const HeaderSection = () => (
                 <span className='heading-primary--main'>Outdoors</span>
                 <span className='heading-primary--sub'> is where life happens</span>
             </h1>
-            <Button type='btn--white' name='Discover Our Tours'/>
+            <Button type='btn-primary' color='white' content='Discover our Tours'/>
         </div>
     </header>
 );
