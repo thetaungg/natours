@@ -36,6 +36,12 @@
   }
 }
 
+.grid-1-1-1 {
+  .col-0, .col-1, .col-2 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) /3);
+  }
+}
+
 .grid-1-1-1-1 {
 
   .col-0, .col-1, .col-2, .col-3 {

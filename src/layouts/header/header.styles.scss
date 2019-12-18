@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: top; /* to make top stays the same as the width change in the browser */
 
+    -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /*(topLeft, topRight, bottomRight, bottomLeft) coordinates// first value is in x direction*/
     /*for advanced clip-paths https://bennettfeely.com/clippy/ */
     position: relative; /* important*/

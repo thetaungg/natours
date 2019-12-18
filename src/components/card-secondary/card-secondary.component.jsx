@@ -1,7 +1,7 @@
 import React from "react";
-import './card.styles.scss';
+import './card-secondary.styles.scss';
 
-const Card = ({heading,iconType,content}) => (
+const SecondaryCard = ({heading,iconType,content}) => (
     <div className="feature-box text-align-center">
         <i className={`icon-${iconType} feature-box__icon`}></i>
         <h3 className="heading-tertiary margin-bottom-small">{heading}</h3>
@@ -11,4 +11,4 @@ const Card = ({heading,iconType,content}) => (
     </div>
 );
 
-export default Card;
+export default SecondaryCard;
