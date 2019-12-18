@@ -31,7 +31,7 @@ const AboutSection = () => (
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut
                     autem culpa doloremque doloribus esse facilis, in minus nobis obcaecati odio
                 </p>
-                
+
                 <Button type='btn-text' content='Learn more &rarr;'/>
             </div>
 

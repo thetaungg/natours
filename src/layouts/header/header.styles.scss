@@ -27,7 +27,6 @@
         top: 40%; /*centering the element */
         left: 50%;/*centering the element */
         transform: translate(-50%,-50%); /* left starts measuring from left most part of the element and top does the same, so, we compensate by subtracting back */
-        text-align: center;
     }
 
     .heading-primary {
@@ -35,7 +34,7 @@
         text-transform: uppercase;
         margin-bottom: 6rem;
 
-        backface-visibility: hidden;
+        backface-visibility: hidden; //to hide minor shake
 
         &--main {
             display: block; /*occupies entire width*/

@@ -1,0 +1,25 @@
+@import "variables";
+
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.margin-bottom-big {
+  margin-bottom: 8rem;
+}
+.margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+.margin-bottom-small {
+  margin-bottom: 2rem;
+}
