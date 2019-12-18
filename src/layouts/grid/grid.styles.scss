@@ -5,7 +5,7 @@
   max-width: $grid-width;
   margin: 0 auto;
 
-  &:not(:last-child){ //all the row except the last child
+  &:not(:last-child){ //all the row except the last child(row)
     margin-bottom: $gutter-vertical;
   }
 

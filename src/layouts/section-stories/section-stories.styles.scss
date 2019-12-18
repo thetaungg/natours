@@ -1,0 +1,15 @@
+@import "../../assets/sass/variables";
+@import "../../assets/sass/utils";
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: $color-grey-light-1;
+}
+.section-row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child){ //all the row except the last child
+    margin-bottom: $gutter-vertical;
+  }
+}
