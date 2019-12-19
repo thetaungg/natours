@@ -6,12 +6,18 @@ import Img1 from "../../assets/images/nat-8.jpg";
 import Img2 from "../../assets/images/nat-9.jpg";
 import Button from "../../components/button/button.component";
 
+import bgVideoMp4 from '../../assets/videos/video.mp4';
+import bgVideoWebm from '../../assets/videos/video.webm';
+import BackgroundVideo from "../../components/background-video/background-video.component";
+
+
 
 const StoriesSection = () => {
     const blindText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus distinctio dolorum, eaque fugit illum ipsum maiores nesciunt nihil omnis quaerat quo quos ratione, reiciendis saepe soluta suscipit ut, vitae voluptas.';
     return(
         <section className="section-stories">
-                <SecondaryHeading text='We make people genuinely happy' marginDir='bottom' spacing='big' alignment='center'/>
+            <BackgroundVideo videoUrlMp4={bgVideoMp4} videoUrlWebm={bgVideoWebm}/>
+            <SecondaryHeading text='We make people genuinely happy' marginDir='bottom' spacing='big' alignment='center'/>
 
             <div className="section-row">
                 <StoryBoard
