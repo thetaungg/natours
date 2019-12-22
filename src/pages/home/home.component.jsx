@@ -6,9 +6,14 @@ import FeaturesSection from "../../layouts/section-features/features.layout";
 import ToursSection from "../../layouts/section-tours/section-tours.layout";
 import StoriesSection from "../../layouts/section-stories/section-stories.layout";
 import BookingSection from "../../layouts/section-booking/section-booking.layout";
+import FooterSection from "../../layouts/section-footer/section-footer.layout";
+
+import FooterLogo from '../../assets/images/logo-green-2x.png'
+import Navigation from "../../components/navigation/navigation.component";
 
 const HomePage = () => (
     <div className='home-page'>
+        <Navigation/>
         <HeaderSection/>
         <main>
             <AboutSection/>
@@ -17,6 +22,7 @@ const HomePage = () => (
             <StoriesSection/>
             <BookingSection/>
         </main>
+        <FooterSection logoUrl={FooterLogo}/>
     </div>
 );
 

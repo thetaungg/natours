@@ -1,0 +1,163 @@
+@import "../../assets/sass/variables";
+
+.navigation {
+
+  &__background {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0.07, 0, 1);
+    //transform: scale(80);
+  }
+
+  &__btn {
+    border: none;
+    background: inherit;
+    font: inherit;
+    outline: inherit;
+    font-size: $default-font-size;
+
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    box-shadow: 0 1rem 3rem rgba($color-black, .2);
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 1.5rem 3.5rem rgba($color-black, .25);
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55); //it is because of this when the navigation appears, it moves to the right a bit before settling down
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited{
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white;
+
+      background-image: linear-gradient(120deg,
+              transparent 0%,
+              transparent 50%,
+              $color-white 50%);
+      background-size: 220%;
+      transition: all .4s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(-1rem);
+    }
+  }
+  //FUNCTIONALITY
+  &-show &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  &-show &__background {
+    transform: scale(80);
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 2.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-dark-grey-3;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+    &::before {top: -.8rem}
+    &::after {top: .8rem}
+  }
+
+  &__btn:hover &__icon::before {
+    top: -1rem;
+  }
+  &__btn:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &-show &__icon {
+    background-color: transparent;
+  }
+  &-show &__icon::before {
+    top: 0;
+    transform: rotate(135deg); //if we also specify transform-origin property in the pseudo elements. eg. right, or left// this rotation will happen around left or right instead of around the center
+  }
+  &-show &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  //before and after pseudo classes still getting the hover affect which change top , so,
+  &-show &__btn:hover &__icon::after{ //when navigation-show appears we want to change btn hover affect to the navigation__icon pseudo elements
+    top: 0;
+  }
+  &-show &__btn:hover &__icon::before{
+    top: 0;
+  }
+}
+
