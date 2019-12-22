@@ -2,7 +2,7 @@ import React from "react";
 import './card-primary.styles.scss';
 import Button from "../button/button.component";
 
-const PrimaryCard = ({gradient,headingText, list, value}) => (
+const PrimaryCard = ({gradient,headingText, list, value, btnAnchorLink}) => (
     <div className='card'>
         <div className="card__side card__side--front">
             <div className={`card__picture card__picture--${gradient}`}>
@@ -25,7 +25,7 @@ const PrimaryCard = ({gradient,headingText, list, value}) => (
                     <p className="card__price-only">Only</p>
                     <p className="card__price-value">${value}</p>
                 </div>
-                <Button content='Book Now!' type='btn-primary' color='white'/>
+                <Button anchorLink={btnAnchorLink} content='Book Now!' type='btn-primary' color='white'/>
             </div>
         </div>
 

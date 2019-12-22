@@ -1,29 +1,31 @@
 @import "../../assets/sass/variables";
 
-@mixin removeBtnInitialStyles { //with it btn can be treated like <a> tag and text-align applies
-    border: none;
-    background: none;
-    color: inherit;
-    font: inherit;
-    outline: inherit;
-    font-size: $default-font-size;
-}
+//@mixin removeBtnInitialStyles { //with it btn can be treated like <a> tag and text-align applies
+//    border: none;
+//    background: none;
+//    text-decoration: none;
+//    color: inherit;
+//    font: inherit;
+//    outline: inherit;
+//    font-size: $default-font-size;
+//}
 
-.btn-primary { /* in case of btn is <a> tag we use btn:link, btn:visited selectors// and everything under position:relative is in the case of button to remove initial html styling*/
-    text-transform: uppercase;
-    /*text-decoration: none;*/
-    padding: 1.3rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s; /* like animation property// all selects all child*/
-    cursor: pointer;
-    position: relative; /* important*/
-    /*to remove initial html styling of the button*/
-    @include removeBtnInitialStyles;
+.btn-primary:link,
+.btn-primary:visited{ /* in case of btn is <a> tag we use btn:link, btn:visited selectors// and everything under position:relative is in the case of button to remove initial html styling*/
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.3rem 4rem;
+        font-size: $default-font-size;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s; /* like animation property// all selects all child*/
+        cursor: pointer;
+        position: relative; /* important*/
+        /*to remove initial html styling of the button*/
 
-    animation: moveInBottom .5s ease-out;
-    animation-delay: .75s;
-    animation-fill-mode: backwards; /*to start with initial state of animate even in delay time*/
+        animation: moveInBottom .5s ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards; /*to start with initial state of animate even in delay time*/
 
     &:hover { //with sudo elements we need & keyword, it means & = .btn
         transform: translateY(-.3rem); /* up is negative y direction */
@@ -73,14 +75,17 @@
 }
 
 .btn-text {
-    @include removeBtnInitialStyles;
-    cursor: pointer;
-    font-size: $default-font-size;
-    color: $color-primary;
-    display: inline-block;
-    border-bottom: 1px solid $color-primary;
-    padding: 3px;
-    transition: all .2s;
+    &:link,
+    &:visited{
+        text-decoration: none;
+        cursor: pointer;
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
 
     &:hover {
         background-color: $color-primary;

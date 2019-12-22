@@ -1,4 +1,5 @@
 @import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
 
 .navigation {
 
@@ -49,14 +50,12 @@
 
     opacity: 0;
     width: 0;
+    visibility: hidden;
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55); //it is because of this when the navigation appears, it moves to the right a bit before settling down
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
     list-style: none;
     text-align: center;
     width: 100%;
@@ -102,6 +101,7 @@
   &-show &__nav {
     opacity: 1;
     width: 100%;
+    visibility: visible;
   }
 
   &-show &__background {
