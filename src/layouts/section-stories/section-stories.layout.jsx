@@ -19,21 +19,21 @@ const StoriesSection = () => {
             <BackgroundVideo videoUrlMp4={bgVideoMp4} videoUrlWebm={bgVideoWebm}/>
             <SecondaryHeading text='We make people genuinely happy' marginDir='bottom' spacing='big' alignment='center'/>
 
-            <div className="section-row">
+            <div className="row">
                 <StoryBoard
                     heading='I had the best week ever with my family'
                     paragraph={blindText}
                     imgUrl={Img1}
                     name='Mary Smith'/>
             </div>
-            <div className='section-row'>
+            <div className='row'>
                 <StoryBoard
                     heading='WOW! My life is completely different now'
                     paragraph={blindText}
                     imgUrl={Img2}
                     name='Jack Wilson'/>
             </div>
-            <div className='section-row text-align-center'>
+            <div className='row text-align-center'>
                 <Button content='Read all stories &rarr;' type='btn-text' color=''/>
             </div>
         </section>

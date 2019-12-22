@@ -1,0 +1,13 @@
+@import "../../assets/sass/utils";
+
+.form {
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  &__radio-group {
+    width: 50%;
+    display: inline-block;
+  }
+}

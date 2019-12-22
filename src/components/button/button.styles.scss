@@ -12,7 +12,7 @@
 .btn-primary { /* in case of btn is <a> tag we use btn:link, btn:visited selectors// and everything under position:relative is in the case of button to remove initial html styling*/
     text-transform: uppercase;
     /*text-decoration: none;*/
-    padding: 1.5rem 4rem;
+    padding: 1.3rem 4rem;
     display: inline-block;
     border-radius: 10rem;
     transition: all .2s; /* like animation property// all selects all child*/
@@ -26,7 +26,7 @@
     animation-fill-mode: backwards; /*to start with initial state of animate even in delay time*/
 
     &:hover { //with sudo elements we need & keyword, it means & = .btn
-        transform: translateY(-.3rem); /* up is negative direction */
+        transform: translateY(-.3rem); /* up is negative y direction */
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /*first value is x dir, second y and third is blur value */
 
         &::after {

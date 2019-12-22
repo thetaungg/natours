@@ -1,0 +1,41 @@
+@import "../../assets/sass/variables";
+
+.radio-label {
+  font-size: $default-font-size;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+.radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid $color-primary;
+  border-radius: 50%; //to make it round
+  display: inline-block; //**important for it to be complete round because border doesn't apply to non-block-level elements
+  position: absolute;
+  left: 0;
+  top: -.4rem;
+
+  &::after { //for another circle inside the custom radio button
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute; //parent doesn't always need to be position relative, it only need to be specified its own position
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $color-primary;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-input:checked + .radio-label .radio-button::after{ //checked available for the radio buttons//when radio-input is checked we're selecting it's sibling element's child element(radio-button)'s pseudo element ::after
+  opacity: 1;
+}

@@ -1,35 +1,44 @@
 @import "variables";
 
-.text-align-center {
-  text-align: center;
+.text-align-center { //we want whatever specified in utility class to take precedent over everything// this is normal
+  text-align: center !important;
 }
 .text-align-left {
-  text-align: left;
+  text-align: left !important;
 }
 .text-align-right {
-  text-align: right;
+  text-align: right !important;
 }
 .heading-tertiary {
-  font-size: $default-font-size;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: $default-font-size !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
 }
 .margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 .margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 .margin-bottom-small {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .margin-top-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 .margin-top-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 .margin-top-small {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
+}
+
+.row {
+  max-width: $grid-width !important;
+  margin: 0 auto !important;
+
+  &:not(:last-child) { //all the row except the last child(row)
+    margin-bottom: $gutter-vertical !important;
+  }
 }

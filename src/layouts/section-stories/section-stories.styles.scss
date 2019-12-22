@@ -1,15 +1,7 @@
 @import "../../assets/sass/variables";
-@import "../../assets/sass/utils";
+@import "../../assets/sass/utils"; //for .row and text-align-center
 
 .section-stories {
   position: relative; //for bg-video component
   padding: 15rem 0;
-}
-.section-row {
-  max-width: $grid-width;
-  margin: 0 auto;
-
-  &:not(:last-child){ //all the row except the last child
-    margin-bottom: $gutter-vertical;
-  }
 }

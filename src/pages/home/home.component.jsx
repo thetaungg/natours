@@ -5,6 +5,7 @@ import AboutSection from "../../layouts/about/about.layout";
 import FeaturesSection from "../../layouts/section-features/features.layout";
 import ToursSection from "../../layouts/section-tours/section-tours.layout";
 import StoriesSection from "../../layouts/section-stories/section-stories.layout";
+import BookingSection from "../../layouts/section-booking/section-booking.layout";
 
 const HomePage = () => (
     <div className='home-page'>
@@ -14,6 +15,7 @@ const HomePage = () => (
             <FeaturesSection/>
             <ToursSection/>
             <StoriesSection/>
+            <BookingSection/>
         </main>
     </div>
 );

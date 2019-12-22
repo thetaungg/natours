@@ -1,0 +1,28 @@
+@import "../../assets/sass/utils";
+@import "../../assets/sass/utils";
+
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark);
+}
+
+.book {
+  background-image: linear-gradient(105deg, //instead of to right or etc. we can define a deg
+                                    rgba($color-white, .9) 0%, //white starts from 0%
+                                    rgba($color-white, .9) 50%, //both white and transparent(or other color) starts at the same 50% the gradient forms a solid line between them
+                                    transparent 50%),
+                                    url("../../assets/images/nat-10.jpg");
+
+  background-size: 100%; //exactly the same as cover
+  border-radius: $default-border-radius;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+  height: 50rem;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+  }
+}

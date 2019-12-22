@@ -6,7 +6,7 @@
   background-color: rgba($color-white, .8);
   font-size: 1.5rem;
   padding: 2.5rem 0;
-  border-radius: 3px;
+  border-radius: $default-border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: all .3s;
   backface-visibility: hidden;

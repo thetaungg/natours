@@ -12,7 +12,7 @@
     height: 52rem;
     transition: all .8s ease;
     backface-visibility: hidden; //to hide the back when performing the transform
-    border-radius: 3px;
+    border-radius: $default-border-radius;
     overflow: hidden; //img is covering up the border-radius // so ..
     box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
 

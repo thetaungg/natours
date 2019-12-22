@@ -1,0 +1,49 @@
+@import "../../assets/sass/variables";
+
+.input-box {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  color: inherit;
+  border-radius: 2px;
+  background-color: rgba($color-white, .5);
+  border: none; //default border is ugly
+  font-family: inherit;
+  border-bottom: 3px solid transparent; //we don't want the border to just appear on hover// it'll make things move around as the height gets bigger
+  width: 90%;
+  display: block;
+  transition: all .3s; //for border bottom
+
+  &:focus {
+    outline: none;//we also don't want the blue outline when focused
+    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+    border-bottom: 3px solid $color-primary;
+  }
+  &:focus:invalid {// taking advantage of html invalid property, eg. email, to set different border colors
+    border-bottom: 3px solid $color-secondary-dark;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-dark-grey-2; //Changing placeholder's color
+  }
+}
+
+.input-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block; // without this all of the properties above are useless because label is not a box level element
+  transition: all .3s;
+}
+
+//.input-box:placeholder-shown ~ .input-label {//we want to change input-label when input-box's placeholder is shown//but we can't do it like this, input-box:placeholder-shown .input-label,because input label is not the child of input-box. so we use sibling selector
+//  opacity: 0;                                 //+ is the sibling selector //it selects the first adjacent sibling that comes after the first selected element, i.e input-box  //we can also use a more general selector ~ //with this the elements doesn't have to be adjacent siblings
+//  visibility: hidden;//with this property the element is really gone// with opacity 0 it's just invisible
+//  //we use opacity 0 because visibility can't be animated but opacity can be
+//  transform: translateY(-4rem);
+//}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4rem);
+}
