@@ -1,4 +1,6 @@
 @import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
+
 
 .header {
     height: 95vh;
@@ -11,6 +13,12 @@
     -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /*(topLeft, topRight, bottomRight, bottomLeft) coordinates// first value is in x direction*/
     /*for advanced clip-paths https://bennettfeely.com/clippy/ */
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+    }
+
     position: relative; /* important*/
 
     &__logo-box {
@@ -42,6 +50,11 @@
             font-size: 6rem;
             font-weight: 400;
             letter-spacing: 3.5rem;
+
+            @include respond(phone) {
+                letter-spacing: 1rem;
+                font-size: 5rem;
+            }
             animation-name: moveInLeft;
             animation-duration: 1s;
             animation-timing-function: ease-out; /*faster in the beginning slowing at the end */
@@ -56,6 +69,9 @@
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 1.74rem;
+            @include respond(phone) {
+                letter-spacing: .5rem;
+            }
             animation: moveInRight 1s ease-out;
         }
     }

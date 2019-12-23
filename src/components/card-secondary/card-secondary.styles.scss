@@ -1,5 +1,7 @@
 @import "../../assets/sass/variables";
 @import "../../assets/sass/utils";
+@import "../../assets/sass/mixins";
+
 
 
 .feature-box {
@@ -10,6 +12,10 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: all .3s;
   backface-visibility: hidden;
+
+  @include respond(tab-port)  {
+    padding: 2rem;
+  }
 
   &:hover {
     transform: translateY(-1.5rem);
@@ -22,5 +28,9 @@
     background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
     -webkit-background-clip: text; //background color only to where the text is
     color: transparent; // making the text disappear so that the clipped background color may appear
+
+    @include respond(tab-port)  {
+      margin-bottom: 0;
+    }
   }
 }

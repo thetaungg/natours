@@ -1,0 +1,42 @@
+@import "./assets/sass/_mixins.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*to force inherit box-sizing that specified in App.css */
+}
+
+html {/*root selector */
+  font-size: 62.5%; /* 0.625 * 16px = 10px //instead of using px this is considered better practice //to use rem values// changing root font size to an easier to calc value */
+
+
+  @include respond (tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond (tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+  @include respond (phone) {
+    font-size: 50%;
+  }
+  @include respond (big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+
+}
+
+.App {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+
+  @include respond (tab-port) {
+    padding: 0;
+  }
+
+  box-sizing: border-box;
+}

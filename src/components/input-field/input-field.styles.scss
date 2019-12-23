@@ -1,4 +1,6 @@
 @import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
+
 
 .input-box {
   font-size: 1.5rem;
@@ -10,6 +12,10 @@
   font-family: inherit;
   border-bottom: 3px solid transparent; //we don't want the border to just appear on hover// it'll make things move around as the height gets bigger
   width: 90%;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
   display: block;
   transition: all .3s; //for border bottom
 

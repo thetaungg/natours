@@ -1,7 +1,13 @@
 @import "../../assets/sass/variables";
 @import "../../assets/sass/utils"; //for .row and text-align-center
+@import "../../assets/sass/mixins";
+
 
 .section-stories {
   position: relative; //for bg-video component
   padding: 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 10rem;
+  }
 }

@@ -1,11 +1,17 @@
 @import "../../assets/sass/variables";
 @import "../../assets/sass/utils";
+@import "../../assets/sass/mixins";
+
 
 
 .section-about {
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh; //moving closer to the header section-triangle's right edge
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
 
   .paragraph {
     font-size: $default-font-size;

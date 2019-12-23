@@ -1,4 +1,6 @@
 @import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
+
 
 .section-features {
   padding: 20rem 0;
@@ -8,6 +10,10 @@
 
   transform: skewY(-7deg);
   margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 
   & > * { //direct child selector * is selecting all child //direct child on select the child only not the child's child
     transform: skewY(7deg); //skewing the Cards back to normal

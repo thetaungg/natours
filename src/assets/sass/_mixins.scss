@@ -12,3 +12,47 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
+//MEDIA QUERIES MANAGER
+/*
+   0  - 600px     - Phone
+600px - 900px     - Tablet portrait
+900px - 1200px    - Tablet landscape
+1200px - 1800px   - Normal version
+1800px +       - Big Desktops
+ */
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content // with this we can't pass codes into mixin
+  }
+}
+
+/*
+just like if statement inside a function
+
+ORDER: Base + Typography , general layout + grid , page layout , components
+ */
+@mixin  respond ($break-point) {
+//1em = 16px //rem are problematic with media queries // also the changes we did to the root font size don't affect media queries ,so, no point using rem
+  @if $break-point == phone {
+    @media (max-width: 37.5em) { //600px
+      @content
+    }
+  }
+  @if $break-point == tab-port {
+    @media (max-width: 56.25em) { //900px
+      @content
+    }
+  }
+  @if $break-point == tab-land {
+    @media (max-width: 75em) { //1200px
+      @content
+    }
+  }
+  @if $break-point == big-desktop {
+    @media (min-width: 112.5em) { //1800px
+      @content
+    }
+  }
+}
