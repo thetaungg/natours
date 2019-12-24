@@ -15,6 +15,10 @@
   visibility: hidden;
   transition: all .3s;
 
+  @include respond(tab-port) {
+    color: #4d4b4b;
+  }
+
   &__content {
     @include absCenter;
 
@@ -30,11 +34,23 @@
     transform: translate(-50%, -50%) scale(.25); //we can't have two transform in the same element, so, we combined them // the first one is from mixin
     transition: all .5s;
     transition-delay: .2s; //for black background to come in first
+
+    @include respond(tab-port) {
+      background-image: linear-gradient(to right, rgba(#ddd8d8, .8), rgba(#cdcaca, .8)), url("../../assets/images/nat-8.jpg");
+      background-position: 50% 50%; //*** to center background image when cropped
+      background-size: cover;
+    }
   }
 
   &__left {
     width: 33.3333333%;
     display: table-cell;
+    height: 100%;
+
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__right {
@@ -42,12 +58,27 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      padding: 1.5rem 2.5rem;
+    }
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+      padding: 3rem 4.5rem;
+    }
   }
 
   &__image {
     display: block;
     width: 100%;
 
+    @include respond(tab-land) {
+      height: 15%; //making height relative or as the popup box bigger in height, the images will leave white spaces under them i.e they get shorter than the height of the popup box
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__text {
