@@ -12,7 +12,7 @@
        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //for safari
        (min-width: 125em){ //for higher resolutions expect for smaller screens // comma is like or: conditional statement
             background-image: linear-gradient(to right bottom,
-                                rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)),
+                                rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
                                 url("../../assets/images/hero-small.jpg") ;
     }
 
