@@ -56,6 +56,13 @@
       z-index: 2;
       transform: scale(1.05) translateY(-.5rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+
+      @include respond(tab-port) {
+        outline: .5rem solid $color-primary;
+        z-index: 11;
+        transform: scale(1.4) translateY(-2rem);
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+      }
     }
   }
 }
