@@ -6,9 +6,18 @@
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom,
           rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
-  url("../../assets/images/nat-4.jpg") ;
+  url("../../assets/images/nat-4-small.jpg") ;
+  background-size: cover;
+  background-position: 50% 50%;
 
-  transform: skewY(-7deg);
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (min-width: 125em) {
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url("../../assets/images/nat-4.jpg") ;
+  }
+
+  transform: skewY(-6deg);
   margin-top: -10rem;
 
   @include respond(tab-port) {
@@ -16,6 +25,6 @@
   }
 
   & > * { //direct child selector * is selecting all child //direct child on select the child only not the child's child
-    transform: skewY(7deg); //skewing the Cards back to normal
+    transform: skewY(6deg); //skewing the Cards back to normal
   }
 }

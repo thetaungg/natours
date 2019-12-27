@@ -1,10 +1,10 @@
 import React from "react";
 import './story-board.styles.scss';
 
-const StoryBoard = ({name,heading, paragraph, imgUrl}) => (
+const StoryBoard = ({name,heading, paragraph, imgLarge, imgSmall}) => (
     <div className="story-board">
         <figure className="story-board__shape">
-            <img className="story-board__img" src={imgUrl} alt="Person on a tour"/>
+            <img className="story-board__img" srcSet={`${imgSmall} 1x, ${imgLarge} 4x`} alt="Person on a tour"/>
             <figcaption className="story-board__caption text-align-center">
                 {name}
             </figcaption>

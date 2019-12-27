@@ -26,15 +26,21 @@
 
 
   &__shape {
+    position: relative;
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);//the shape-outside is for defining how the elements should float around the shape eg.texts
-    shape-outside: circle(50% at 50% 50%); //only works when the element is floating and have height and width defined// the first value is radius , the second is the position of the center
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); //the best way to move a floated element around
-    position: relative;
+    overflow: hidden; /****very import // especially for chrome// this cuts out the part of the image that is overflow from the element its in i.e bigger than the element*/
+    border-radius: 50%; //for the browsers that doesn't support clip-path
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-shape-outside: circle(50% at 50% 50%);//the shape-outside is for defining how the elements should float around the shape eg.texts
+      shape-outside: circle(50% at 50% 50%); //only works when the element is floating and have height and width defined// the first value is radius , the second is the position of the center
+      -webkit-clip-path: circle(50% at 50% 50%); //the first value is the radius // the second values are position of the center
+      clip-path: circle(50% at 50% 50%);
+      border-radius: unset; //don't want border-radius if the clip-path is working
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);

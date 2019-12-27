@@ -3,20 +3,39 @@
 
 
 .header {
-    height: 95vh;
+    height: 85vh;
     background-image: linear-gradient(to right bottom,
                         rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
-                        url("../../assets/images/hero.jpg") ;
+                        url("../../assets/images/hero-small.jpg") ;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+       (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //for safari
+       (min-width: 125em){ //for higher resolutions expect for smaller screens // comma is like or: conditional statement
+            background-image: linear-gradient(to right bottom,
+                                rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)),
+                                url("../../assets/images/hero-small.jpg") ;
+    }
+
+    //@media (min-width: 2000px) {
+    //    background-image: linear-gradient(to right bottom,
+    //            rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    //    url("../../assets/images/hero.jpg") ;
+    //}
+
     background-size: cover;
     background-position: top; /* to make top stays the same as the width change in the browser */
 
-    -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /*(topLeft, topRight, bottomRight, bottomLeft) coordinates// first value is in x direction*/
-    /*for advanced clip-paths https://bennettfeely.com/clippy/ */
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 95vh;
+        -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%); /*(topLeft, topRight, bottomRight, bottomLeft) coordinates// first value is in x direction*/
+        /*for advanced clip-paths https://bennettfeely.com/clippy/ */
+}
 
     @include respond(phone) {
         -webkit-clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+        height: 95vh;
     }
 
     position: relative; /* important*/

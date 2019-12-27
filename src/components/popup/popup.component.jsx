@@ -6,13 +6,13 @@ import Hyphenate from 'react-hyphen';
 
 
 
-const Popup = ({img1Url, img2Url, popupId, popupCloseAnchor}) => {
+const Popup = ({img1Large, img2Large, img1Small, img2Small, popupId, popupCloseAnchor}) => {
     return(
         <div className="popup" id={popupId}>
             <div className="popup__content">
                 <div className="popup__left">
-                    <img className='popup__image' src={img1Url} alt="Tour-pic"/>
-                    <img className='popup__image' src={img2Url} alt=""/>
+                    <img className='popup__image' srcSet={`${img1Small} 1x, ${img1Large} 4x`} alt="Tour-pic"/>
+                    <img className='popup__image' srcSet={`${img2Small} 1x, ${img2Large} 4x`} alt="Tour-pic"/>
 
                 </div>
                 <div className="popup__right">

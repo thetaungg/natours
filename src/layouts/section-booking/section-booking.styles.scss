@@ -37,7 +37,16 @@
     background-image: linear-gradient(to right,
             rgba($color-white, .9) 0%,
             rgba($color-white, .9) 100%),
-    url("../../assets/images/nat-10.jpg");
+    url("../../assets/images/nat-10-small.jpg");
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //for safari
+           (min-width: 125em) {
+              background-image: linear-gradient(to right,
+                      rgba($color-white, .9) 0%,
+                      rgba($color-white, .9) 100%),
+              url("../../assets/images/nat-10.jpg");
+    }
   }
 
   &__form {

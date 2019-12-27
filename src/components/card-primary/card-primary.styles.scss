@@ -13,6 +13,7 @@
     font-size: 2rem;
     height: 52rem;
     transition: all .8s ease;
+    -webkit-backface-visibility: hidden; //to hide the back when performing the transform
     backface-visibility: hidden; //to hide the back when performing the transform
     border-radius: $default-border-radius;
     overflow: hidden; //img is covering up the border-radius // so ..
@@ -60,13 +61,31 @@
     border-top-right-radius: 3px; //because of the clip-path the border radius of top part of the card disappeared
 
     &--primary{
-          background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark), url("../../assets/images/nat-6.jpg");
+          background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark), url("../../assets/images/nat-6-small.jpg");
+
+          @media (min-resolution: 192dpi) and (min-width: 37.5em),
+                 (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),// for safari
+                 (min-width: 125em) {
+                     background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark), url("../../assets/images/nat-6.jpg");
+                }
       }
     &--secondary{
-      background-image: linear-gradient(to right bottom,$color-secondary-light, $color-secondary-dark), url("../../assets/images/nat-5.jpg");
+      background-image: linear-gradient(to right bottom,$color-secondary-light, $color-secondary-dark), url("../../assets/images/nat-5-small.jpg");
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+             (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),// for safari
+             (min-width: 125em) {
+                  background-image: linear-gradient(to right bottom,$color-secondary-light, $color-secondary-dark), url("../../assets/images/nat-5.jpg");
+                }
     }
     &--tertiary{
-      background-image: linear-gradient(to right bottom,$color-tertiary-light, $color-tertiary-dark), url("../../assets/images/nat-7.jpg");
+      background-image: linear-gradient(to right bottom,$color-tertiary-light, $color-tertiary-dark), url("../../assets/images/nat-7-small.jpg");
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+              (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),// for safari
+              (min-width: 125em) {
+                background-image: linear-gradient(to right bottom,$color-tertiary-light, $color-tertiary-dark), url("../../assets/images/nat-7.jpg");
+              }
     }
   }
 
@@ -79,6 +98,10 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
+
+    @include respond(tab-port) {
+      width: 50%;
+    }
   }
 
   &__heading-span {
@@ -163,6 +186,10 @@
     }
 
     &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side--back {
       transform: rotateY(0);
     }
 
