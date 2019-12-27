@@ -9,6 +9,7 @@
   position: relative;
   height: 52rem; //card height collapse to 0 with specifying position absolute to the __side //this is one way to fix it
 
+
   &__side {
     font-size: 2rem;
     height: 52rem;
@@ -168,7 +169,9 @@
 
 
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em),
+          only screen and (hover: none) { //for devices that can't hover// eg. mobile devices
+
     height: auto;
     border-radius: $default-border-radius;
     background-color: $color-white; //to connect two sides

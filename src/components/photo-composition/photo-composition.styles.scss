@@ -21,6 +21,10 @@
       box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
     }
 
+    @include respond(phone) {
+      width: 30%;
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;
@@ -64,6 +68,8 @@
         box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
       }
     }
+
+
   }
 }
 

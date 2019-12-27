@@ -33,6 +33,7 @@
     transform: translateX(-3rem) skewX(12deg); //the best way to move a floated element around
     overflow: hidden; /****very import // especially for chrome// this cuts out the part of the image that is overflow from the element its in i.e bigger than the element*/
     border-radius: 50%; //for the browsers that doesn't support clip-path
+    backface-visibility: hidden;
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       -webkit-shape-outside: circle(50% at 50% 50%);//the shape-outside is for defining how the elements should float around the shape eg.texts

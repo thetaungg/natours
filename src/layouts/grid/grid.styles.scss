@@ -33,7 +33,7 @@
     }
 
     @include respond(tab-port) {
-      width: 100% !important;
+      width: 100% !important; //each component will have its only row
     }
   }
 }

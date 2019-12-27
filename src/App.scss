@@ -1,4 +1,6 @@
 @import "./assets/sass/_mixins.scss";
+@import "./assets/sass/variables";
+
 
 *,
 *::after,
@@ -39,4 +41,9 @@ html {/*root selector */
   }
 
   box-sizing: border-box;
+}
+
+::selection { //changing text selection color
+  background-color: $color-primary;
+  color: $color-white;
 }
