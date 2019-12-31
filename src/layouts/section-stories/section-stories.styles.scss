@@ -10,4 +10,10 @@
   @include respond(tab-port) {
     padding: 10rem;
   }
+
+  .row {
+    @media only screen and (max-width: 26.875em) {
+      padding: 4rem 0;
+    }
+  }
 }

@@ -22,11 +22,11 @@
 1800px +       - Big Desktops
  */
 
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content // with this we can't pass codes into mixin
-  }
-}
+//@mixin respond-phone {
+//  @media (max-width: 600px) {
+//    @content // with this we can't pass codes into mixin
+//  }
+//}
 
 /*
 just like if statement inside a function

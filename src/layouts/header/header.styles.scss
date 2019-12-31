@@ -64,15 +64,22 @@
 
         backface-visibility: hidden; //to hide minor shake
 
+        @include respond(phone) {
+            margin-top: 4rem;
+        }
+
         &--main {
             display: block; /*occupies entire width*/
             font-size: 6rem;
             font-weight: 400;
             letter-spacing: 3.5rem;
 
+            @include respond(tab-port) {
+                letter-spacing: 2rem;
+            }
             @include respond(phone) {
-                letter-spacing: 1rem;
-                font-size: 5rem;
+                letter-spacing: .8rem;
+                font-size: 4.5rem;
             }
             animation-name: moveInLeft;
             animation-duration: 1s;
@@ -88,8 +95,14 @@
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 1.74rem;
+
+            @include respond(tab-port) {
+                letter-spacing: 1.2rem;
+            }
             @include respond(phone) {
                 letter-spacing: .5rem;
+                font-size: 1.5rem;
+                font-weight: 500;
             }
             animation: moveInRight 1s ease-out;
         }

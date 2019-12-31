@@ -10,6 +10,10 @@
   @include respond(tab-port) {
     padding: 10rem;
   }
+
+  @media only screen and (max-width: 26.875em) {
+    padding: 10rem 5rem;
+  }
 }
 
 .book {
@@ -49,9 +53,9 @@
     }
   }
 
-  @media only screen and (max-width: 31.25em){ //500px
-    width: 140%;
-    margin-left: -20%;
+  @media only screen and (max-width: 32.5em){ //500pxv
+    width: 130%;
+    margin-left: -15%;
   }
 
   &__form {
