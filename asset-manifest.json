@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/natours/static/css/main.f5ee7bab.chunk.css",
+    "main.js": "/natours/static/js/main.b1f3722f.chunk.js",
+    "main.js.map": "/natours/static/js/main.b1f3722f.chunk.js.map",
+    "runtime-main.js": "/natours/static/js/runtime-main.77c40394.js",
+    "runtime-main.js.map": "/natours/static/js/runtime-main.77c40394.js.map",
+    "static/js/2.a8542b24.chunk.js": "/natours/static/js/2.a8542b24.chunk.js",
+    "static/js/2.a8542b24.chunk.js.map": "/natours/static/js/2.a8542b24.chunk.js.map",
+    "index.html": "/natours/index.html",
+    "precache-manifest.04f76479f94326b12e445d6926e0a72b.js": "/natours/precache-manifest.04f76479f94326b12e445d6926e0a72b.js",
+    "service-worker.js": "/natours/service-worker.js",
+    "static/css/main.f5ee7bab.chunk.css.map": "/natours/static/css/main.f5ee7bab.chunk.css.map",
+    "static/js/2.a8542b24.chunk.js.LICENSE": "/natours/static/js/2.a8542b24.chunk.js.LICENSE",
+    "static/media/header.styles.scss": "/natours/static/media/hero-small.cd69d355.jpg",
+    "static/media/logo-green-1x.png": "/natours/static/media/logo-green-1x.4c42c11f.png",
+    "static/media/logo-green-2x.png": "/natours/static/media/logo-green-2x.3365abba.png",
+    "static/media/logo-green-small-2x.png": "/natours/static/media/logo-green-small-2x.888043d5.png",
+    "static/media/logo-white.png": "/natours/static/media/logo-white.40d4ef82.png",
+    "static/media/nat-1-large.jpg": "/natours/static/media/nat-1-large.7fdf2a88.jpg",
+    "static/media/nat-1.jpg": "/natours/static/media/nat-1.d6c15bf0.jpg",
+    "static/media/section-booking.styles.scss": "/natours/static/media/nat-10.2797561f.jpg",
+    "static/media/nat-2-large.jpg": "/natours/static/media/nat-2-large.7a25f199.jpg",
+    "static/media/nat-2.jpg": "/natours/static/media/nat-2.4d378368.jpg",
+    "static/media/nat-3-large.jpg": "/natours/static/media/nat-3-large.417d3d74.jpg",
+    "static/media/nat-3.jpg": "/natours/static/media/nat-3.cc2b0543.jpg",
+    "static/media/features.styles.scss": "/natours/static/media/nat-4.61bbf12a.jpg",
+    "static/media/card-primary.styles.scss": "/natours/static/media/nat-7.5f846d16.jpg",
+    "static/media/nat-8-small.jpg": "/natours/static/media/nat-8-small.5c906a87.jpg",
+    "static/media/popup.styles.scss": "/natours/static/media/nat-8.14efd82b.jpg",
+    "static/media/nat-9-small.jpg": "/natours/static/media/nat-9-small.8d747e40.jpg",
+    "static/media/nat-9.jpg": "/natours/static/media/nat-9.b525a99b.jpg",
+    "static/media/video.webm": "/natours/static/media/video.f556a2c3.webm",
+    "static/media/video.mp4": "/natours/static/media/video.ffcd876c.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77c40394.js",
+    "static/js/2.a8542b24.chunk.js",
+    "static/css/main.f5ee7bab.chunk.css",
+    "static/js/main.b1f3722f.chunk.js"
+  ]
+}
